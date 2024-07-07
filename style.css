@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    overflow: hidden;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings with responsive sizing */
+h2 {
+    font-size: 4em; /* Default for large screens */
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Paragraph with responsive padding and text alignment */
+p {
+    font-size: 1.5em; /* Default for large screens */
+    text-align: justify;
+    padding: 50px; /* Default for large screens */
+}
+
+/* Cursor element with fixed size */
+.cursor {
+    height: 200px;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Media query for screens 1200px and wider */
+@media (max-width: 1200px) {
+    h2 {
+        font-size: 3.5em; /* Smaller font size for medium screens */
+    }
+    p {
+        font-size: 1.3em;
+        padding: 40px; /* Reduced padding for medium screens */
+    }
+}
+
+/* Media query for screens 768px to 1200px */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 3em; /* Smaller font size for smaller screens */
+    }
+    p {
+        font-size: 1.2em;
+        padding: 30px; /* Further reduced padding */
+    }
+    .cursor {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+/* Media query for screens 480px to 768px */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2.5em; /* Smaller font size for mobile devices */
+    }
+    p {
+        font-size: 1em;
+        padding: 20px; /* Minimal padding for smaller screens */
+    }
+    .cursor {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+/* Media query for screens smaller than 480px */
+@media (max-width: 320px) {
+    h2 {
+        font-size: 2em; /* Further reduced font size for very small screens */
+    }
+    p {
+        font-size: 0.9em;
+        padding: 10px; /* Minimal padding for very small screens */
+    }
+    .cursor {
+        height: 80px;
+        width: 80px;
+    }
+}
